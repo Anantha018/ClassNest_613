@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-mqnu-8oeu7f$h)3ch6wh6ugv*_bjzo#qx1epp&#s6csu0g7%rl
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', '3.85.193.2']
 
 
 # Application definition
@@ -46,15 +46,15 @@ MIDDLEWARE = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://nonest.up.railway.app',
-    '*'
+    'http://3.85.193.2'
 ]
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 
 CORS_ALLOWED_ORIGINS = [
     'https://nonest.up.railway.app',
-    '*'
+    'http://3.85.193.2'
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
