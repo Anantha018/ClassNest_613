@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mqnu-8oeu7f$h)3ch6wh6ugv*_bjzo#qx1epp&#s6csu0g7%rl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['*']
@@ -44,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://*', 'http://*']
+CSRF_TRUSTED_ORIGINS = []
 
 # CSRF_TRUSTED_ORIGINS = [
     # 'https://nonest.up.railway.app'
@@ -57,6 +57,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOWED_ORIGINS = [
 #     'https://nonest.up.railway.app'
 # ]
+
+CSRF_COOKIE_SAMESITE = "None"
+SESSION_COOKIE_SAMESITE = "None"
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
